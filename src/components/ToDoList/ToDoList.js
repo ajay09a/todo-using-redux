@@ -4,7 +4,7 @@ import { toggleTodo } from '../../redux/actions/todoAction'
 import './ToDoList.css'
 
 function ToDoList(/*{todos, onToggle}*/) {
-  const todos = useSelector((state)=> state.todos)
+  const todos = useSelector((state)=> state.todoReducer.todos)
   const dispatch = useDispatch();
   return (
     <div className='container'>

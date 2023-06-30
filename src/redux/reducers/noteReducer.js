@@ -7,7 +7,7 @@ const initialState={
     ]
 }
 
-export function todoReducer(state=initialState, action){
+export function noteReducer(state=initialState, action){
     switch(action.type){
         case ADD_NOTE:
             return {
@@ -21,11 +21,11 @@ export function todoReducer(state=initialState, action){
                 ]
             }
         case DELETE_NOTE:
-            state.notes.splice(action.index, 1);
-                return{
-                    ...state,
-                    notes: state.notes
-                }
+            state.notes.splice(action.index,1);
+            return{
+                ...state,
+                notes: [...state.notes]
+            }
         default:
             return state;
     }
