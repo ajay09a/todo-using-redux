@@ -4,7 +4,7 @@ import { useDispatch } from 'react-redux';
 import { addTodo } from '../../redux/actions/todoAction';
 import "./ToDoForm.css";
 
-function ToDoForm({ onCreateTodo }) {
+function ToDoForm(/*{ onCreateTodo }*/) {
     const [todoText, setTodoText] = useState("");
     const dispatch = useDispatch();
   const handleSubmit = (e) => {
